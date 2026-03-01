@@ -58,7 +58,7 @@ def add_equipment():
     else:
         print("Equipment already exists.")
 
-    time.sleep(2)  # Pause for 2 seconds
+    time.sleep(4)  # Pause for 4 seconds
 
 
 # This function displays all available equipment
@@ -69,7 +69,7 @@ def view_equipment():
         for item in equipment_list:
             print(item)
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # This function removes equipment from the equipment_list
@@ -83,7 +83,7 @@ def remove_equipment():
     else:
         print("Equipment not found.")
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # -------------------- BOOKING FUNCTIONS --------------------
@@ -99,7 +99,7 @@ def record_booking():
     # Check if equipment exists
     if equipment_name not in equipment_list:
         print("Equipment does not exist.")
-        time.sleep(2)
+        time.sleep(4)
         return
 
     already_booked = False
@@ -129,7 +129,7 @@ def record_booking():
 
         print("Booking recorded successfully.")
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # This function displays all booking records
@@ -145,7 +145,7 @@ def view_all_bookings():
                 booking["date"]
             )
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # This function searches bookings by student name
@@ -166,7 +166,7 @@ def search_by_student():
     if not found:
         print("No bookings found.")
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # This function searches bookings by equipment name
@@ -187,7 +187,7 @@ def search_by_equipment():
     if not found:
         print("No bookings found.")
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # This function cancels a booking using Booking ID
@@ -196,7 +196,7 @@ def cancel_booking():
         cancel_id = int(input("Enter Booking ID to Cancel: "))
     except ValueError:
         print("Invalid ID.")
-        time.sleep(2)
+        time.sleep(4)
         return
 
     found = False
@@ -212,7 +212,7 @@ def cancel_booking():
     if not found:
         print("Booking ID not found.")
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # This function displays bookings for a specific date
@@ -233,7 +233,7 @@ def view_by_date():
     if not found:
         print("No bookings found for this date.")
 
-    time.sleep(2)
+    time.sleep(4)
 
 
 # -------------------- MAIN PROGRAM LOOP --------------------
@@ -266,11 +266,11 @@ def main():
             remove_equipment()
         elif choice == '10':
             print("Exiting system...")
-            time.sleep(2)
+            time.sleep(4)
             sys.exit()   # Exit the program completely
         else:
             print("Invalid choice. Try again.")
-            time.sleep(2)
+            time.sleep(4)
 
 
 # This ensures the program runs only when executed directly
